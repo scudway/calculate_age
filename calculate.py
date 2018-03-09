@@ -26,3 +26,11 @@ def days_in_months(y,m,d):
         days += 1
 
     return days
+
+
+def days_in_year(y):
+    # find the number of days in a giver year. leap year = 366 , non leap year = 365
+    if is_leap_year(y):
+        return 366
+    else:
+        return 365
