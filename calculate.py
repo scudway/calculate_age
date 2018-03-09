@@ -48,3 +48,6 @@ def days_between_dates(y1, m1, d1, y2, m2, d2):
     # of days after y2.
     total_days = total_days - days_in_months(y1,m1,d1) + days_in_months(y2,m2,d2)
     return total_days
+
+
+print days_between_dates(1995,10 ,27,2018,3,9)
