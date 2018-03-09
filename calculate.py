@@ -34,3 +34,17 @@ def days_in_year(y):
         return 366
     else:
         return 365
+
+
+def days_between_dates(y1, m1, d1, y2, m2, d2):
+    # calculating the total number of days
+    total_days = 0
+    current_year = y1
+    while current_year < y2:
+        total_days += days_in_year(current_year)
+        current_year += 1
+
+    # we calculated the number of days between y1 to y2, we take off the number of days after y1, and we add the number
+    # of days after y2.
+    total_days = total_days - days_in_months(y1,m1,d1) + days_in_months(y2,m2,d2)
+    return total_days
