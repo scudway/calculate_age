@@ -10,3 +10,19 @@ def is_leap_year(year):
         return False
     else:
         return True
+
+
+def days_in_months(y,m,d):
+    # find the number of days in the number of months
+    # add pre-defined number of days passed in d variable
+    days = d
+    for i, j in enumerate(daysOfMonths):
+        # we must stop at a month before -> m-1 , because we already have days in d
+        if i < m-1:
+            days += j
+
+    # add 29th february if its a leap year
+    if is_leap_year(y) and m > 2:
+        days += 1
+
+    return days
